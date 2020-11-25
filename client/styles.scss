@@ -8,3 +8,13 @@ body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: grey;
+  height: 60px;
+  width: 100%;
+}
