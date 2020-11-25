@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Home from "./components/Home.jsx";
-import Registration from "./components/Registration.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Registration from "./components/Registration.jsx";
+import CharactersPage from "./components/characters/CharactersPage.jsx";
 import { MyProvider } from "./context/userContext.jsx";
 const App = () => {
   return (
@@ -12,6 +13,9 @@ const App = () => {
         <Switch>
           <Route exact path='/'>
             <Home />
+          </Route>
+          <Route exact path='/characters'>
+            <CharactersPage />
           </Route>
           <Route exact path='/registration'>
             <Registration />
