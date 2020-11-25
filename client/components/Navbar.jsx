@@ -12,6 +12,9 @@ const Navbar = () => {
           <Link to='/characters'>Characters</Link>
         </li>
         <li>
+          <Link to='/episodes'>Episodes</Link>
+        </li>
+        <li>
           <Link to='/registration'>Registration</Link>
         </li>
         {state.email && <h3>Welcome, {state.email}</h3>}
