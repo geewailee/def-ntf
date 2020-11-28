@@ -1,8 +1,10 @@
-## Rick and Morty Forever
+## Rick and Morty
 
-Forever and 100 years
+Forever and 100 years! A fan site created with React.
 
 ### Installation
+
+Please install with a typical node installation.
 
 ```sh
 npm i
@@ -10,29 +12,19 @@ npm i
 
 ### To Run
 
+Run the app in development mode.
+
 ```sh
 npm start
 ```
 
-or
+### Viewing
 
-```sh
-npm run dev
-```
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Open browser
+### Testing
 
-```sh
-http://localhost:3000/
-```
-
-or
-
-```sh
-http://localhost:8080/
-```
-
-### To test
+Test this app with React Testing Library.
 
 ```sh
 npm run test

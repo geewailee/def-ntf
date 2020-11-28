@@ -20,24 +20,24 @@ const CharactersPage = () => {
   };
   return (
     <div className='container'>
-      <h1>Characters</h1>
-      {characters.map(item => (
-        <CharactersDetails
-          key={item.id}
-          id={item.id}
-          name={item.name}
-          origin={item.origin.name}
-          location={item.location.name}
-          origin={item.origin.name}
-          species={item.species}
-          status={item.status}
-          type={item.type}
-        />
-      ))}
+      <div className='cards'>
+        {characters.map(item => (
+          <CharactersDetails
+            key={item.id}
+            id={item.id}
+            image={item.image}
+            name={item.name}
+            origin={item.origin.name}
+            location={item.location.name}
+            origin={item.origin.name}
+            species={item.species}
+            status={item.status}
+            type={item.type}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
 export default CharactersPage;
-
-// Show 18 characters with their name and origin. Also add a “more information” button which when clicked can show all the available information regarding the characters (excluding URLs).

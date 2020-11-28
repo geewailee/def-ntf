@@ -15,17 +15,27 @@ const Registration = props => {
   };
 
   return (
-    <div>
+    <div className='registration'>
       <form>
-        <label htmlFor='name'>Name </label>
-        <input type='text' value={name} onChange={e => setName(e.target.value)} />
-        <label htmlFor='email'>Email</label>
-        <input type='text' value={email} onChange={e => setEmail(e.target.value)} />
-        <label htmlFor='password'>Password</label>
-        <input type='text' value={password} onChange={e => setPassword(e.target.value)} />
-        <button type='submit' onClick={onClick}>
-          Register
-        </button>
+        <div className='registration-form'>
+          <div className='registration-input'>
+            <label htmlFor='name'>Name </label>
+            <input type='text' value={name} onChange={e => setName(e.target.value)} />
+          </div>
+          <div className='registration-input'>
+            <label htmlFor='email'>Email </label>
+            <input type='text' value={email} onChange={e => setEmail(e.target.value)} />
+          </div>
+          <div className='registration-input'>
+            <label htmlFor='password'>Password </label>
+            <input type='text' value={password} onChange={e => setPassword(e.target.value)} />
+          </div>
+          <div className='registration-input'>
+            <button type='submit' onClick={onClick}>
+              Register
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );

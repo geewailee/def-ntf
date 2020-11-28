@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import EpisodesMoreDetails from "./EpisodesMoreDetails.jsx";
 
 const EpisodesDetails = ({ id, air_date, created, episode, episodeName, characters }) => {
   return (
-    <div>
-      <li>air_date: {air_date}</li>
-      <li>episode: {episode}</li>
+    <div className='card'>
+      <h4>{episodeName}</h4>
+      <h4>{air_date}</h4>
       {
         <EpisodesMoreDetails
           key={id}

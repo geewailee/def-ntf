@@ -23,8 +23,6 @@ const EpisodesMoreDetails = ({ created, episodeName, characters }) => {
     try {
       const res = await fetch(getCharacters(characters));
       const jsonData = await res.json();
-      //   console.log(`jsonData`);
-      //   console.log(jsonData);
       setData(jsonData);
     } catch (error) {
       console.log(`error ${error}`);
@@ -32,21 +30,18 @@ const EpisodesMoreDetails = ({ created, episodeName, characters }) => {
   };
 
   return (
-    <div>
-      <div>
-        {!moreInfo && <button onClick={onClick}>More Information</button>}
-        {moreInfo && (
-          <div>
-            {created ? <li>created: {created}</li> : null}
-            {episodeName ? <li>episodeName: {episodeName}</li> : null}
-            <label htmlFor='characters'>characters: </label>
-            {Data.map((character, i) => (
-              <EpisodesCharacters key={i} characterName={character.name} />
-            ))}
-          </div>
-        )}
-        <br />
-      </div>
+    <div className='more-details'>
+      {!moreInfo && <button onClick={onClick}>More Information</button>}
+      {moreInfo && (
+        <div>
+          {created ? <h4>Created on {created}</h4> : null}
+          <label htmlFor='characters'>Characters </label>
+          {Data.map((character, i) => (
+            <EpisodesCharacters key={i} characterName={character.name} />
+          ))}
+        </div>
+      )}
+      <br />
     </div>
   );
 };

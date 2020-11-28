@@ -19,19 +19,20 @@ const EpisodesPage = () => {
     }
   };
   return (
-    <div className='container'>
-      <h1>Episodes</h1>
-      {Data.map(item => (
-        <EpisodesDetails
-          key={item.id}
-          id={item.id}
-          air_date={item.air_date}
-          created={item.created}
-          episode={item.episode}
-          episodeName={item.episodeName}
-          characters={item.characters}
-        />
-      ))}
+    <div className='episodesPage'>
+      <div className='cards'>
+        {Data.map(item => (
+          <EpisodesDetails
+            key={item.id}
+            id={item.id}
+            air_date={item.air_date}
+            created={item.created}
+            episode={item.episode}
+            episodeName={item.name}
+            characters={item.characters}
+          />
+        ))}
+      </div>
     </div>
   );
 };

@@ -4,22 +4,28 @@ import { userContext } from "../context/userContext.jsx";
 
 const Navbar = () => {
   const { state } = useContext(userContext);
-  console.log(state);
   return (
     <div>
       <div className='navbar'>
         <li>
-          <Link to='/characters'>Characters</Link>
+          <Link to='/characters' style={{ textDecoration: "none" }}>
+            Characters
+          </Link>
         </li>
         <li>
-          <Link to='/episodes'>Episodes</Link>
+          <Link to='/episodes' style={{ textDecoration: "none" }}>
+            Episodes
+          </Link>
         </li>
         <li>
-          <Link to='/registration'>Registration</Link>
+          <Link to='/registration' style={{ textDecoration: "none" }}>
+            Registration
+          </Link>
         </li>
-        {state.email && <h3>Welcome, {state.email}</h3>}
+        {state.email && <li>Welcome, {state.email}</li>}
       </div>
     </div>
   );
 };
+
 export default Navbar;

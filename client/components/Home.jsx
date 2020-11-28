@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 const Home = () => {
   return (
-    <div className='home'>
-      <h1>Rick and Morty Forever!!!</h1>
+    <div>
+      <div className='home'>
+        <h1>What Is My Purpose....</h1>
+      </div>
     </div>
   );
 };
